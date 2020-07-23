@@ -12,9 +12,10 @@ import modalWin1 from './modules/modalWin1';
 import submissionForm from './modules/submissionForm';
 import modalWin2 from './modules/modalWin2';
 import accordion from './modules/accordion';
+import maskPhone from './modules/mascPhone';
 
 
-
+maskPhone('.phone-user');
 accordion();
 modalWin2();
 modalWin1();
