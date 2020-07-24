@@ -6,7 +6,11 @@ const accordion = () => {
     const  togleTabContent = index => {
         for (let i = 0; i < collapse.length; i++) {
             if (index === i) {
-                collapse[i].classList.toggle('in');           
+                collapse[i].classList.remove('in'); 
+                collapse[i].classList.add('in');          
+            }else{
+                collapse[i].classList.add('in');
+                collapse[i].classList.remove('in'); 
             }
         }
     };
@@ -15,7 +19,6 @@ const accordion = () => {
         let target = event.target;
        
         target = target.closest('.panel-heading');
-        console.log(target);
         if (target) {
             panelCollapse.forEach((item, i) => {
                 if (item === target) {
@@ -28,10 +31,5 @@ const accordion = () => {
 };
 
 export default accordion;
-
-
-
-
-
 
 

@@ -13,8 +13,11 @@ import submissionForm from './modules/submissionForm';
 import modalWin2 from './modules/modalWin2';
 import accordion from './modules/accordion';
 import maskPhone from './modules/mascPhone';
+import popupCheck from './modules/popupCheck';
+import showBlock from './modules/showBlock';
 
-
+showBlock();
+popupCheck();
 maskPhone('.phone-user');
 accordion();
 modalWin2();
