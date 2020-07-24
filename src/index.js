@@ -15,7 +15,9 @@ import accordion from './modules/accordion';
 import maskPhone from './modules/mascPhone';
 import popupCheck from './modules/popupCheck';
 import showBlock from './modules/showBlock';
+import calcAccordion from './modules/calcAccordion';
 
+calcAccordion();
 showBlock();
 popupCheck();
 maskPhone('.phone-user');
