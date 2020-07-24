@@ -37,7 +37,7 @@ const calcAccordion = () => {
         console.log(e);
         e.addEventListener('click', (event) => {
             const target = event.target;
-           // console.log(target);
+           console.log(target);
         });
     });
 
