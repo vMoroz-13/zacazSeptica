@@ -85,15 +85,13 @@ const calcAccordion = () => {
              expand = document.querySelectorAll('.expand');//селекты
            
         
-            //  const countSum = (typeValue) =>{
+             const countSum = (typeValue) =>{
              
-            //     let total = 0;
+               let total = 0;
             
-            //     total = res1 * typeValue;
-            
-            
-            //     calcResult.textContent = total;
-            //  };
+                total = res * typeValue;           
+                calcResult.value = total;
+              };
             
             
                 // expand.addEventListener('change', (event)=>{
@@ -101,7 +99,7 @@ const calcAccordion = () => {
                 //     let typeValue = target.options[target.selectedIndex].value;
                 //     console.log(typeValue);
         
-                //     countSum(typeValue);
+                     countSum(100);
                 //  });
            
              
