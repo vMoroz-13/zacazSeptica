@@ -11,12 +11,14 @@ const calcAccordion = () => {
     collapseFour = document.querySelector('#collapseFour'),
     dnone = document.querySelector('.d-none'),
     checkbox = document.getElementById('myonoffswitch');
+   // let res;
+    
 
         const closeDnone = () =>{
             dnone.style.display = 'none';
         };
         closeDnone();
-//раскрываем аккордион
+    //раскрываем аккордион
      const  togleTabContent = index => {
          for (let i = 0; i < collapse.length; i++) {
              if (index === i) {
@@ -43,7 +45,7 @@ const calcAccordion = () => {
         });
     });
 
-//работа кнопок "Следующий шаг"
+        //работа кнопок "Следующий шаг"
      accBtn.forEach((e) => {
         e.addEventListener('click', (event) =>{
             event.preventDefault();
@@ -65,13 +67,53 @@ const calcAccordion = () => {
     const dNone = () => {         
          checkbox.addEventListener('change', (e)=>{
              let target = e.target;
+             let res;
             if (target.checked){
                 dnone.style.display = 'none';
+                res = 10000;
+                              
             }else{
                 dnone.style.display = '';
-            }
-         });
+                res = 12000;             
+            }///////////////////
+          
+            //Вычисления
+        const calc = () => {
+            console.log(res);
+            const panelBody = document.querySelector('.panel-body'),//родитель
+             calcResult = document.getElementById('calc-result'),//результат
+             expand = document.querySelectorAll('.expand');//селекты
+           
+        
+            //  const countSum = (typeValue) =>{
+             
+            //     let total = 0;
+            
+            //     total = res1 * typeValue;
+            
+            
+            //     calcResult.textContent = total;
+            //  };
+            
+            
+                // expand.addEventListener('change', (event)=>{
+                //     const target = event.target;
+                //     let typeValue = target.options[target.selectedIndex].value;
+                //     console.log(typeValue);
+        
+                //     countSum(typeValue);
+                //  });
+           
+             
+            
+            };
+            calc(res);
+         });///////////////
     };
+  
     dNone();
 };
+
+
+   
 export default calcAccordion;
